@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
   
   getAllProducts(){
     this.products.getAllProducts().subscribe(data => {
-      console.log(data);
       this.allProducts = data;
+      console.log(this.allProducts);
     })
   }
 
