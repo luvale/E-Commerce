@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 // import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,14 +14,17 @@ export class AuthService {
 
   loginEmail(user:any){
     //return this.http.post(this.Url, user);
-    /* return fetch(this.Url, {
+    /* 
+    return fetch(this.Url, {
           method:'POST',
           body: user,
       })
       */
     return fetch('https://fakestoreapi.com/auth/login',{
         method:'POST',
-        body:JSON.stringify(user)
+        body:JSON.stringify(user),
+        mode: 'cors',
+        credentials: 'include'
     }) .then(res=>res.json())
     .then(json=>console.log(json))
   }
