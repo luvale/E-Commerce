@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardsProductsComponent } from './components/cards-products/cards-products.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CardsProductsComponent } from './components/cards-products/cards-produc
     NavComponent,
     SearchComponent,
     CardsProductsComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
