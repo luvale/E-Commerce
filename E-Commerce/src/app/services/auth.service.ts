@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
   private Url = "https://fakestoreapi.com/auth/login";
-  invocation = new XMLHttpRequest();
 
   constructor(private http:HttpClient) { }
 
