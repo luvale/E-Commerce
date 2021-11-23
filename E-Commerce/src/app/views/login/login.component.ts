@@ -20,8 +20,9 @@ export class LoginComponent implements OnInit {
   }
 
   Login(form:Object){
-    // console.log(form);
+    console.log(form);
     this.auth.loginEmail(form)//.subscribe(data => console.log(data))
   }
-// Access to XMLHttpRequest at 'https://fakestoreapi.com/auth/login' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+// Access to XMLHttpRequest at 'https://fakestoreapi.com/auth/login' from origin 'http://localhost:4200' 
+// has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 }

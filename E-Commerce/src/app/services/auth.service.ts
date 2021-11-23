@@ -24,7 +24,6 @@ export class AuthService {
         method:'POST',
         body:JSON.stringify(user),
         mode: 'cors',
-        credentials: 'include'
     }) .then(res=>res.json())
     .then(json=>console.log(json))
   }
