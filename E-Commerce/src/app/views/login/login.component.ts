@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms'
-import { AuthService } from '../../services/auth.service'
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,9 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required)
   })
 
-  constructor(private auth:AuthService) { }
+  constructor(
+    private auth:AuthService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +26,7 @@ export class LoginComponent implements OnInit {
     console.log(form);
     this.auth.loginEmail(form).subscribe(token => {
       localStorage.setItem('token', JSON.stringify(token));
+      // this.router.navigateByUrl('home')
     })
   }
 }
