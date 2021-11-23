@@ -1,6 +1,6 @@
 <section>
-<app-search></app-search>
+<app-search (searchEmitter)="search = $event"></app-search>
 <app-categories></app-categories>
-<app-cards-products></app-cards-products>
+<app-cards-products [getSearch]="search"></app-cards-products>
 <app-nav></app-nav>
 </section>

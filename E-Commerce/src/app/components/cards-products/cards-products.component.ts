@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ProductsService } from '../../services/products.service'
 
 @Component({
@@ -6,14 +6,23 @@ import { ProductsService } from '../../services/products.service'
   templateUrl: './cards-products.component.html',
   styleUrls: ['./cards-products.component.css']
 })
-export class CardsProductsComponent implements OnInit {
+export class CardsProductsComponent implements OnInit, OnChanges {
   
   allProducts:any = [];
+  filteredProducts:any = [];
+  @Input()
+  getSearch:string = '';
 
   constructor(private products:ProductsService ) { }
 
   ngOnInit(): void {
-    this.getAllProducts()
+    this.getAllProducts();
+  }
+
+  ngOnChanges(): void {
+    this.search();
+    console.log(this.filteredProducts);
+    console.log(this.getSearch);
   }
 
   getAllProducts(){
@@ -21,6 +30,12 @@ export class CardsProductsComponent implements OnInit {
       this.allProducts = data;
       console.log(this.allProducts);
     })
+  }
+
+  search() {
+    if (this.getSearch == '') return this.allProducts
+    return this.filteredProducts = this.allProducts.filter((product:any) => 
+    product.title.toUpperCase().includes(this.getSearch.toUpperCase()))
   }
 
 }
