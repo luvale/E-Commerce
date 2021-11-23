@@ -7,5 +7,13 @@ button {
   align-items: center;
   justify-content: space-evenly;
   border-radius: 10px;
-  width: 6rem;
+  width: 103px;
+  height: 38px;
+  border: none;
+  background-color: var(--pink);
+}
+.fas, p{
+  font-size: 17px;
+  background-color: var(--pink);
+  color: var(--orange);
 }
