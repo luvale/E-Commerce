@@ -8,7 +8,7 @@ import { ProductsService } from '../../services/products.service'
 })
 export class CardsProductsComponent implements OnInit {
   
-  allProducts:Object = {}
+  allProducts:any = [];
 
   constructor(private products:ProductsService ) { }
 
