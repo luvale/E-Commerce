@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 //Components
 import { NavComponent } from './components/nav/nav.component';
 import { SearchComponent } from './components/search/search.component';
+import { CardsProductsComponent } from './components/cards-products/cards-products.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { SearchComponent } from './components/search/search.component';
     RoutingComponents,
     NavComponent,
     SearchComponent,
+    CardsProductsComponent,
   ],
   imports: [
     BrowserModule,
