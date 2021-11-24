@@ -43,12 +43,15 @@ export class CardsProductsComponent implements OnInit, OnChanges {
     this.filteredProducts = this.allProducts.filter((product:any) => product.category == this.getCategory);
   }
 
-  addToCart(id:any, product:any){
+  addToCart(id:string, item:Object){
     const productsSelect = this.cart.find((product:any) => product.id == id);
     if (productsSelect === undefined) {
-    this.cart.push({product, amount: 1})
-    console.log(this.cart)
-  }
+      this.cart.push({
+        item,
+        amount: 1
+      })
+      console.log(this.cart)
+    }
   }
 
 }
