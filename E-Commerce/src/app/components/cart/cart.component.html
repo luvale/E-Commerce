@@ -1,16 +1,22 @@
-<section>
+<section id="totalContainer">
+  <h1 id="total">Total: ${{total | number: '1.0-2'}}</h1>
+</section>
+<section id="products">
   <div class="cards" *ngFor="let product of cart">
     <div class="img-container">
       <img src="{{product.item.image}}" alt="productImg">
     </div>
     <div>
-      <p class="productName">{{product.item.title | slice:0:20}}</p>
+      <div class="nameAndDelete">
+        <p class="productName">{{product.item.title | slice:0:20}}</p>
+        <i class="fas fa-trash-alt" (click)="deleteItem(product)"></i>
+      </div>
       <div class="priceAndAmount">
-        <p class="price">${{product.item.price}}</p>
+        <p class="price">${{product.item.price * product.amount | number: '1.0-2'}}</p>
         <div class="amountContainer">
-          <button>-</button>
-          <p class="amount">1</p>
-          <button>+</button>
+          <button (click)="changeAmount(-base,product)">-</button>
+          <p class="amount">{{product.amount}}</p>
+          <button (click)="changeAmount(base,product)">+</button>
         </div>
       </div>
     </div>
