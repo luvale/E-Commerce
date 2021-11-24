@@ -5,12 +5,12 @@
   <div id="formContainer">
     <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm.value)">
       <div>
-        <p class="titles">Usuario</p>
-        <input class="inputs" type="text" placeholder="Usuario" formControlName="username">
+        <p class="titles">Username</p>
+        <input class="inputs" type="text" placeholder="username" formControlName="username">
       </div>
       <div>
-        <p class="titles">Contraseña</p>
-        <input class="inputs" type="password" placeholder="Contraseña" formControlName="password">
+        <p class="titles">Password</p>
+        <input class="inputs" type="password" placeholder="•••••••" formControlName="password">
       </div> 
       <input id="btn" type="submit" value="Ingresar">
     </form>
