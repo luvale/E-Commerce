@@ -1,0 +1,14 @@
+.fas{
+  font-size: 20px;
+  position:absolute;
+  left: 5vw;
+}
+h1{
+  font-size: 20px;
+}
+div{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
