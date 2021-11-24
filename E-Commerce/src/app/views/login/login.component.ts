@@ -3,11 +3,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   LoginForm = new FormGroup({
@@ -23,10 +25,14 @@ export class LoginComponent implements OnInit {
   }
 
   Login(form:Object){
-    console.log(form);
-    this.auth.loginEmail(form).subscribe(token => {
-      localStorage.setItem('token', JSON.stringify(token));
-      // this.router.navigateByUrl('home')
+    this.auth.loginEmail(form).subscribe( response => {
+      const objectKeys = Object.keys(response) 
+      if(objectKeys.length == 1){
+        localStorage.setItem('token', JSON.stringify(response));
+        this.router.navigateByUrl('home');
+      } else {
+        alert('User or password is incorrect 😔')
+      }
     })
   }
 }
