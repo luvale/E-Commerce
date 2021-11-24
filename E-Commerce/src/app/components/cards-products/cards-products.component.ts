@@ -50,7 +50,8 @@ export class CardsProductsComponent implements OnInit, OnChanges {
         item,
         amount: 1
       })
-      console.log(this.cart)
+      console.log(this.cart);
+      localStorage.setItem('cart', JSON.stringify(this.cart));
     }
   }
 

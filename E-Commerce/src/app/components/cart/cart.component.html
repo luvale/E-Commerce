@@ -1,1 +1,18 @@
-<p>cart works!</p>
+<section>
+  <div class="cards" *ngFor="let product of cart">
+    <div class="img-container">
+      <img src="{{product.item.image}}" alt="productImg">
+    </div>
+    <div>
+      <p class="productName">{{product.item.title | slice:0:20}}</p>
+      <div class="priceAndAmount">
+        <p class="price">${{product.item.price}}</p>
+        <div class="amountContainer">
+          <button>-</button>
+          <p class="amount">1</p>
+          <button>+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
