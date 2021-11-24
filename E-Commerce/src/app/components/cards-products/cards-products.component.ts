@@ -12,6 +12,8 @@ export class CardsProductsComponent implements OnInit, OnChanges {
   filteredProducts:any = [];
   @Input()
   getSearch:string = '';
+  @Input()
+  getCategory:string = '';
 
   constructor(private products:ProductsService ) { }
 
@@ -22,7 +24,7 @@ export class CardsProductsComponent implements OnInit, OnChanges {
   ngOnChanges(): void {
     this.search();
     console.log(this.filteredProducts);
-    console.log(this.getSearch);
+    console.log(this.getCategory);
   }
 
   getAllProducts(){

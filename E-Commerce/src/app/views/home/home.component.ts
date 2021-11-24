@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   search:string = '';
+  category:string = '';
 
   constructor( ) { }
   
