@@ -1,1 +1,18 @@
-<p>login works!</p>
+<section id="view">
+  <div id="img-container">
+    <img id="catImg" src="../../../assets/cat.png" alt="cat">
+  </div>
+  <div id="formContainer">
+    <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm.value)">
+      <div>
+        <p class="titles">Usuario</p>
+        <input class="inputs" type="text" placeholder="Usuario" formControlName="username">
+      </div>
+      <div>
+        <p class="titles">Contraseña</p>
+        <input class="inputs" type="password" placeholder="Contraseña" formControlName="password">
+      </div> 
+      <input id="btn" type="submit" value="Ingresar">
+    </form>
+  </div>
+</section>
