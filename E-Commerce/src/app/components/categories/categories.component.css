@@ -7,13 +7,27 @@ section{
   justify-content: space-around;
   align-items: center;
 }
-
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 button{
-  width: 65px;
-  height: 65px;
+  background-color: var(--white);
+  width: 60px;
+  height: 60px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
+}
+p{
+  background-color: var(--pink);
+}
+.fas{
+  font-size: 2.2rem;
+}
+img{
+  width: 2.2rem;
 }

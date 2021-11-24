@@ -16,7 +16,6 @@ export class CategoriesComponent implements OnInit {
   }
   
   getCategory($event:any){
-    console.log($event.target.classList.toString())
     this.sendCategory.emit($event.target.classList.toString());
   }
 

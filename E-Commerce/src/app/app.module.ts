@@ -12,6 +12,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardsProductsComponent } from './components/cards-products/cards-products.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
     SearchComponent,
     CardsProductsComponent,
     CategoriesComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
