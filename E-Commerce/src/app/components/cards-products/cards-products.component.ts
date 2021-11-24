@@ -22,6 +22,7 @@ export class CardsProductsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
+    this.filterProducts();
     this.search();
     console.log(this.filteredProducts);
     console.log(this.getCategory);
@@ -38,6 +39,10 @@ export class CardsProductsComponent implements OnInit, OnChanges {
     if (this.getSearch == '') return this.allProducts
     return this.filteredProducts = this.allProducts.filter((product:any) => 
     product.title.toUpperCase().includes(this.getSearch.toUpperCase()))
+  }
+
+  filterProducts(){
+    this.filteredProducts = this.allProducts.filter((product:any) => product.category == this.getCategory);
   }
 
 }
