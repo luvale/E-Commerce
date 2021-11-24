@@ -1,18 +1,22 @@
 <section id="view">
-  <div id="img-container">
+  <article id="img-container">
     <img id="catImg" src="../../../assets/cat.png" alt="cat">
-  </div>
-  <div id="formContainer">
-    <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm.value)">
-      <div>
-        <p class="titles">Username</p>
-        <input class="inputs" type="text" placeholder="username" formControlName="username">
-      </div>
-      <div>
-        <p class="titles">Password</p>
-        <input class="inputs" type="password" placeholder="•••••••" formControlName="password">
-      </div> 
-      <input id="btn" type="submit" value="Ingresar">
-    </form>
-  </div>
+  </article>
+
+  <section id="formAndText">
+    <h2>Welcome!</h2>
+    <article id="formContainer">
+        <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm.value)">
+          <div>
+            <p class="titles">Username</p>
+            <input class="inputs" type="text" placeholder="username" formControlName="username">
+          </div>
+          <div>
+            <p class="titles">Password</p>
+            <input class="inputs" type="password" placeholder="•••••••" formControlName="password">
+          </div> 
+          <input id="btn" type="submit" value="Ingresar">
+        </form>
+      </article>
+  </section>
 </section>
