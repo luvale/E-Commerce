@@ -21,6 +21,11 @@ input{
   font-size: 17px;
 }
 .fas{
-  margin-left: 13px;
-  background-color: var(--gray);
+  margin-left: 6px;
+}
+
+@media (min-width : 870px){
+  .fas{
+    margin-left: 13px;
+  }
 }
