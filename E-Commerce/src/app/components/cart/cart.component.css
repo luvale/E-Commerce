@@ -19,6 +19,7 @@
   margin-bottom: 60px;
 }
 .cards{
+  cursor:pointer;
   background-color: var(--gray);
   margin:10px;
   width: 328px;
@@ -85,8 +86,9 @@ button{
   height: 37px;
   color: var(--orange);
   font-size: 17px;
+  cursor:pointer;
 }
-button:active{
+button:hover{
   background-color: var(--gray);
   transition: 0.3s;
 }
