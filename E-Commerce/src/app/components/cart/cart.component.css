@@ -16,8 +16,10 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 .cards{
+  cursor:pointer;
   background-color: var(--gray);
   margin:10px;
   width: 328px;
@@ -26,6 +28,10 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 2fr;
+}
+.cards:hover{
+  background-color: var(--pink);
+  transition: 0.3s;
 }
 .img-container{
   display: flex;
@@ -42,7 +48,6 @@ img{
   border-radius: 12px;
 }
 .productName{
-  background-color: var(--gray);
   font-size: 18px;
 }
 .fas{
@@ -61,7 +66,6 @@ img{
   grid-template-columns: 2fr 1.5fr;;
 }
 .price{
-  background-color: var(--gray);
   font-size: 18px;
   font-weight: 600;
 }
@@ -82,6 +86,11 @@ button{
   height: 37px;
   color: var(--orange);
   font-size: 17px;
+  cursor:pointer;
+}
+button:hover{
+  background-color: var(--gray);
+  transition: 0.3s;
 }
 .amount{
   background-color: var(--white);

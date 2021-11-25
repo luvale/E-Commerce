@@ -1,6 +1,5 @@
-<section>
 <app-search (searchEmitter)="search = $event"></app-search>
+<h1>Categories:</h1>
 <app-categories (sendCategory)="category = $event"></app-categories>
 <app-cards-products [getSearch]="search" [getCategory]="category"></app-cards-products>
 <app-nav></app-nav>
-</section>

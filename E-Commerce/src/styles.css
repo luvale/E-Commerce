@@ -2,9 +2,11 @@
 
 :root {
   --pink: #FDF0E7;
+  --pink-hover: #F8E6DA;
   --white: #FDFCFC;
   --orange: #F37F43;
   --gray: #EDEEF0;
+  --gray-hover: #E4E6EA;
   --dark: #2E2112;
 }
 

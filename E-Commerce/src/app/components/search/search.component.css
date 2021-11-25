@@ -1,8 +1,14 @@
+section{
+  display: flex;
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;  
+}
+
 div{
   background-color: var(--gray);
   border-radius: 17px;
   width: 360px;
-  margin-top: 1rem;
 }
 input{
   border-radius: 17px;
@@ -15,6 +21,16 @@ input{
   font-size: 17px;
 }
 .fas{
-  margin-left: 13px;
-  background-color: var(--gray);
+  margin-left: 6px;
+}
+
+input:focus, input:hover {
+  background-color: var(--gray-hover);
+  transition: .4s;
+}
+
+@media (min-width : 870px){
+  .fas{
+    margin-left: 13px;
+  }
 }
