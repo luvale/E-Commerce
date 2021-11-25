@@ -49,6 +49,9 @@ h2{
   font-size: 14px;
   padding-left: 20px;
 }
+.inputs:focus{
+  background-color: var(--gray);
+}
 button{
   margin: 10px;
   border:none;
@@ -60,7 +63,11 @@ button{
   font-size: 15px;
   font-weight: 600;
 }
-button
+button:hover{
+  transition: .3s;
+  color: var(--orange);
+  background-color: var(--pink);
+}
 
 @media (min-width : 870px){
   #view{
