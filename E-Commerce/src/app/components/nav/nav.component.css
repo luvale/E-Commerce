@@ -17,6 +17,11 @@ button {
   height: 38px;
   border: none;
   background-color: var(--pink);
+  cursor: pointer;
+}
+button:hover{
+  background-color: var(--pink-hover);
+  transition: 0.3s;
 }
 .fas, p{
   font-size: 17px;

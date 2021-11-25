@@ -21,6 +21,11 @@ button{
   align-items: center;
   justify-content: center;
   border: none;
+  cursor:pointer;
+}
+button:hover{
+  background-color: var(--gray);
+  transition: 0.3s;
 }
 p{
   background-color: var(--pink);

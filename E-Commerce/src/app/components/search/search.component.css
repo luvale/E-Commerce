@@ -24,6 +24,11 @@ input{
   margin-left: 6px;
 }
 
+input:focus, input:hover {
+  background-color: var(--gray-hover);
+  transition: .4s;
+}
+
 @media (min-width : 870px){
   .fas{
     margin-left: 13px;

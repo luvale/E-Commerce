@@ -28,6 +28,10 @@
   align-items: center;
   grid-template-columns: 1fr 2fr;
 }
+.cards:hover{
+  background-color: var(--pink);
+  transition: 0.3s;
+}
 .img-container{
   display: flex;
   justify-content: center;
@@ -43,7 +47,6 @@ img{
   border-radius: 12px;
 }
 .productName{
-  background-color: var(--gray);
   font-size: 18px;
 }
 .fas{
@@ -62,7 +65,6 @@ img{
   grid-template-columns: 2fr 1.5fr;;
 }
 .price{
-  background-color: var(--gray);
   font-size: 18px;
   font-weight: 600;
 }
@@ -83,6 +85,10 @@ button{
   height: 37px;
   color: var(--orange);
   font-size: 17px;
+}
+button:active{
+  background-color: var(--gray);
+  transition: 0.3s;
 }
 .amount{
   background-color: var(--white);

@@ -16,6 +16,11 @@ section{
   justify-content: space-around;
   align-items: center;
   justify-items: center;
+  cursor:pointer;
+}
+.cards:hover{
+  transition: 0.3s;
+  background-color: var(--pink);
 }
 .img-container{
   background-color: var(--white);
@@ -32,12 +37,10 @@ img{
 }
 .productName{
   font-size: 13px;
-  background-color: var(--gray);
 }
 .price{
   font-size: 17px;
   font-weight: 600;
-  background-color: var(--gray);
 }
 
 
